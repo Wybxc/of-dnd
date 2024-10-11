@@ -1,6 +1,6 @@
 # 元火阵营测试
 
-在线测试地址：[https://dnd.wybxc.cc/](https://dnd.wybxc.cc/)
+在线测试地址：[https://url.wybxc.cc/of-dnd](https://url.wybxc.cc/of-dnd)
 
 ## License
 
