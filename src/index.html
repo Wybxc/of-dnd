@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>元火阵营测试</title>
+  <link rel="stylesheet" href="index.scss" />
+  <script type="module" src="index.ts"></script>
+</head>
+
+<body>
+  <header>
+    元火阵营测试
+  </header>
+  <main>
+    <progress id="progress"></progress>
+    <div id="tests">
+      <article>
+        <p>前辈在大群中公开反对你，你会：</p>
+        <label><input name="q1" type="radio" data-infl="xg" data-value="2">接受批评，改变方法</label>
+        <label><input name="q1" type="radio" data-infl="xg" data-value="1">等群主醒了把我管理下了吧</label>
+        <label><input name="q1" type="radio" data-infl="xe" data-value="1">忽略前辈的轻蔑，诽谤他们</label>
+        <label><input name="q1" type="radio" data-infl="xe" data-value="2">老毕登别指指点点</label>
+      </article>
+      <article>
+        <p>社庆OP工期告急，而你正忙于准备考试。你会暂时放弃复习来给社团帮忙吗？</p>
+        <label><input name="q2" type="radio" data-infl="xg" data-value="2">向元火献上心脏</label>
+        <label><input name="q2" type="radio" data-infl="xg" data-value="1">会，但有点不情愿</label>
+        <label><input name="q2" type="radio" data-infl="xn" data-value="1">除非我肯定我能通过考试</label>
+        <label><input name="q2" type="radio" data-infl="xn" data-value="2">不会</label>
+      </article>
+      <article>
+        <p>你正在准备一档晚会的节目，但你想做的事情和社团理念冲突，你会：</p>
+        <label><input name="q3" type="radio" data-infl="xe" data-value="2">离开社团，不带一点罪恶感</label>
+        <label><input name="q3" type="radio" data-infl="xe" data-value="1">阳奉阴违，秘密行事</label>
+        <label><input name="q3" type="radio" data-infl="xn" data-value="1">我会抗拒这诱惑</label>
+        <label><input name="q3" type="radio" data-infl="xn" data-value="2">我认为背叛社团的事情极为可恨</label>
+      </article>
+      <article>
+        <p>你尊敬执委吗？</p>
+        <label><input name="q4" type="radio" data-infl="lx" data-value="2">执委代表着元火前进的方向</label>
+        <label><input name="q4" type="radio" data-infl="lx" data-value="1">能当上执委的人一定有可取之处</label>
+        <label><input name="q4" type="radio" data-infl="cx" data-value="1">有些人不要以为自己在管理社团</label>
+        <label><input name="q4" type="radio" data-infl="cx" data-value="2">不过襟裾牛马，衣冠狗彘耳</label>
+      </article>
+      <article>
+        <p>如果执委要你担任走秀团团长，但你从未听过这个题材，你会：</p>
+        <label><input name="q5" type="radio" data-infl="lx" data-value="2">听从安排，为能帮助社团而自豪</label>
+        <label><input name="q5" type="radio" data-infl="lx" data-value="1">不也挺好的吗</label>
+        <label><input name="q5" type="radio" data-infl="nx" data-value="1">巧妙地拒绝</label>
+        <label><input name="q5" type="radio" data-infl="nx" data-value="2">团长要逃跑了！</label>
+      </article>
+      <article>
+        <p>有一位社员疏远了你。在他毕业之际，他想与你和解。你会：</p>
+        <label><input name="q6" type="radio" data-infl="cx" data-value="2">与他谈谈，但坚守立场</label>
+        <label><input name="q6" type="radio" data-infl="cx" data-value="1">不跟他说话</label>
+        <label><input name="q6" type="radio" data-infl="nx" data-value="1">不计前嫌敞开心扉地讨论前事</label>
+        <label><input name="q6" type="radio" data-infl="nx" data-value="2">积极进行和解，并留心听他的遗言</label>
+      </article>
+      <article>
+        <p>一个德高望重的元火老人允诺如果你能泄露你朋友的秘密，他便请你吃饭。你会：</p>
+        <label><input name="q7" type="radio" data-infl="xe" data-value="2">朋友哪有饭重要</label>
+        <label><input name="q7" type="radio" data-infl="xe" data-value="1">照做，但在故事里半真半假地添油加醋</label>
+        <label><input name="q7" type="radio" data-infl="xg" data-value="1">拒绝</label>
+        <label><input name="q7" type="radio" data-infl="xg" data-value="2">不管如何，都站在朋友那一边</label>
+      </article>
+      <article>
+        <p>你会亲近朋友，还是与大部分人保持一段距离以保安全？</p>
+        <label><input name="q8" type="radio" data-infl="xg" data-value="2">元火的大家都是朋友</label>
+        <label><input name="q8" type="radio" data-infl="xg" data-value="1">我有些密友</label>
+        <label><input name="q8" type="radio" data-infl="xn" data-value="1">有几个让我感到安心的人</label>
+        <label><input name="q8" type="radio" data-infl="xn" data-value="2">纯社恐，怕了</label>
+      </article>
+      <article>
+        <p>你有在背后讲过朋友的黑屁吗？</p>
+        <label><input name="q9" type="radio" data-infl="xe" data-value="2">我干过不止一次</label>
+        <label><input name="q9" type="radio" data-infl="xe" data-value="1">我只干过那么一次</label>
+        <label><input name="q9" type="radio" data-infl="xn" data-value="1">我曾被怂恿过这么做，但从未做过</label>
+        <label><input name="q9" type="radio" data-infl="xn" data-value="2">我从未考虑过这种事</label>
+      </article>
+      <article>
+        <p>你怎么看待社员间的恋爱？</p>
+        <label><input name="q10" type="radio" data-infl="lx" data-value="2">我渴望蔷薇色的大学生活</label>
+        <label><input name="q10" type="radio" data-infl="lx" data-value="1">要谈恋爱而不是谈元火恋爱</label>
+        <label><input name="q10" type="radio" data-infl="cx" data-value="1">我担心我会错过其他人对我的爱</label>
+        <label><input name="q10" type="radio" data-infl="cx" data-value="2">也不数数分了几对了</label>
+      </article>
+      <article>
+        <p>朋友向你请求帮助，你会要求他们回报吗？</p>
+        <label><input name="q11" type="radio" data-infl="lx" data-value="2">会，并且我会希望他们能有书面的承诺</label>
+        <label><input name="q11" type="radio" data-infl="lx" data-value="1">会，但我会给他们更多的时间来回报</label>
+        <label><input name="q11" type="radio" data-infl="nx" data-value="1">不会，虽然能得到回报会更好</label>
+        <label><input name="q11" type="radio" data-infl="nx" data-value="2">不会，他们欠我一个人情，我乐意帮助</label>
+      </article>
+      <article>
+        <p>你仍与社团的老朋友保持联系吗？</p>
+        <label><input name="q12" type="radio" data-infl="nx" data-value="2">是的，我们定期交流活动信息</label>
+        <label><input name="q12" type="radio" data-infl="nx" data-value="1">是的，我们努力保持联系，分享经验</label>
+        <label><input name="q12" type="radio" data-infl="cx" data-value="1">不会，我经常换社团</label>
+        <label><input name="q12" type="radio" data-infl="cx" data-value="2">不会，我觉得我们没有共同话题了</label>
+      </article>
+      <article>
+        <p>你会花时间和金钱在社团上吗？</p>
+        <label><input name="q13" type="radio" data-infl="xg" data-value="2">会，我会优先考虑社团的需要</label>
+        <label><input name="q13" type="radio" data-infl="xg" data-value="1">如果我的需求被满足的话，我会尽我所能</label>
+        <label><input name="q13" type="radio" data-infl="xn" data-value="1">不会，我没钱也不闲</label>
+        <label><input name="q13" type="radio" data-infl="xn" data-value="2">不会，花时间和金钱在社团上是一种浪费</label>
+      </article>
+      <article>
+        <p>假如元火与另一个社团争夺活动场地的使用权，你会：</p>
+        <label><input name="q14" type="radio" data-infl="xg" data-value="2">保卫它直至自己的最后一口气</label>
+        <label><input name="q14" type="radio" data-infl="xg" data-value="1">和残存同伴构筑防御</label>
+        <label><input name="q14" type="radio" data-infl="xe" data-value="1">一看到势头不对就逃跑</label>
+        <label><input name="q14" type="radio" data-infl="xe" data-value="2">与入侵者达成协议，成为间谍</label>
+      </article>
+      <article>
+        <p>你在社团的工作因为某些原因做不完了，你的同伴愿意帮助你吗？</p>
+        <label><input name="q15" type="radio" data-infl="xn" data-value="2">会的，因为他们知道我也会为他们做同样的事</label>
+        <label><input name="q15" type="radio" data-infl="xn" data-value="1">会的，因为我很受欢迎</label>
+        <label><input name="q15" type="radio" data-infl="xe" data-value="1">可能不会，因为我不受信任</label>
+        <label><input name="q15" type="radio" data-infl="xe" data-value="2">肯定不会，我在集体中树敌了</label>
+      </article>
+      <article>
+        <p>你尊重社团的规章吗？</p>
+        <label><input name="q16" type="radio" data-infl="lx" data-value="2">毋庸置疑，是的</label>
+        <label><input name="q16" type="radio" data-infl="lx" data-value="1">是的，总的来说他们是最佳的管理方式</label>
+        <label><input name="q16" type="radio" data-infl="cx" data-value="1">规矩是死的人是活的</label>
+        <label><input name="q16" type="radio" data-infl="cx" data-value="2">我不关心他们；他们拿我没辙</label>
+      </article>
+      <article>
+        <p>元火的大家觉得你是奇怪的人吗？</p>
+        <label><input name="q17" type="radio" data-infl="cx" data-value="2">是的，这些井底之蛙不会理解超规格的人</label>
+        <label><input name="q17" type="radio" data-infl="cx" data-value="1">有些会，因为并不是所有人都认同我</label>
+        <label><input name="q17" type="radio" data-infl="nx" data-value="1">不会，我看起来一切正常</label>
+        <label><input name="q17" type="radio" data-infl="nx" data-value="2">不会，我就是元火最正常的人</label>
+      </article>
+      <article>
+        <p>你当执委会希望为社团无偿奉献吗？</p>
+        <label><input name="q18" type="radio" data-infl="lx" data-value="2">做这种事是我所乐意接受的荣誉</label>
+        <label><input name="q18" type="radio" data-infl="lx" data-value="1">当然。这是每个人的义务</label>
+        <label><input name="q18" type="radio" data-infl="nx" data-value="1">不会，除非无人能接手此事</label>
+        <label><input name="q18" type="radio" data-infl="nx" data-value="2">不会，我不想为集体利益负责</label>
+      </article>
+      <article>
+        <p>你报名了晚会节目，但晚会时长已经严重超时，你会：</p>
+        <label><input name="q19" type="radio" data-infl="xg" data-value="2">退出，把时间让给别人</label>
+        <label><input name="q19" type="radio" data-infl="xg" data-value="1">压缩自己节目的时间，余下的给其他节目</label>
+        <label><input name="q19" type="radio" data-infl="xe" data-value="1">劝别的节目压缩时间</label>
+        <label><input name="q19" type="radio" data-infl="xe" data-value="2">向执委施压，以保证自己的节目时长</label>
+      </article>
+      <article>
+        <p>给你足够的好处，你会为了社团内部竞争去打小报告吗？</p>
+        <label><input name="q20" type="radio" data-infl="xe" data-value="2">会，类似的事我干过了</label>
+        <label><input name="q20" type="radio" data-infl="xe" data-value="1">如果我能逃避惩罚的话，我会的</label>
+        <label><input name="q20" type="radio" data-infl="xn" data-value="1">不会，尽管这些好处很诱人</label>
+        <label><input name="q20" type="radio" data-infl="xn" data-value="2">不会，而且我会提醒社长注意这个情况</label>
+      </article>
+      <article>
+        <p>社团突然面临一次重大危机，你会：</p>
+        <label><input name="q21" type="radio" data-infl="xg" data-value="2">主动承担解决危机的艰难任务</label>
+        <label><input name="q21" type="radio" data-infl="xg" data-value="1">尽力帮助大家渡过难关</label>
+        <label><input name="q21" type="radio" data-infl="xn" data-value="1">尽量避免卷入危机</label>
+        <label><input name="q21" type="radio" data-infl="xn" data-value="2">离开社团，避免牵连</label>
+      </article>
+      <article>
+        <p>你尊重执委群体的权威吗？</p>
+        <label><input name="q22" type="radio" data-infl="lx" data-value="2">是的，X主席万岁！</label>
+        <label><input name="q22" type="radio" data-infl="lx" data-value="1">是的，我们的执委大体上是公平、公正的</label>
+        <label><input name="q22" type="radio" data-infl="cx" data-value="1">不会，执委也是一般社员</label>
+        <label><input name="q22" type="radio" data-infl="cx" data-value="2">不会，权力必定导致腐化</label>
+      </article>
+      <article>
+        <p>给你一项稳赚的任务，你会为竞争对手的社团提供情报吗？</p>
+        <label><input name="q23" type="radio" data-infl="cx" data-value="2">会，因为我觉得自己的社团没有前途</label>
+        <label><input name="q23" type="radio" data-infl="cx" data-value="1">会，因为社团的机密对我无所谓</label>
+        <label><input name="q23" type="radio" data-infl="nx" data-value="1">不会，我会被抓的</label>
+        <label><input name="q23" type="radio" data-infl="nx" data-value="2">不会，我不会辜负社团对我的信任</label>
+      </article>
+      <article>
+        <p>你认为执委是否应该以集体名义调解社员之间的矛盾？</p>
+        <label><input name="q24" type="radio" data-infl="lx" data-value="2">是的，因为维护制度比任何个人争执重要</label>
+        <label><input name="q24" type="radio" data-infl="lx" data-value="1">是的，保护社员是社长的责任</label>
+        <label><input name="q24" type="radio" data-infl="nx" data-value="1">你在开玩笑吗？执委连自己的事情都拎不清楚</label>
+        <label><input name="q24" type="radio" data-infl="nx" data-value="2">绝对不应该，社员的矛盾要用社员的方式解决</label>
+      </article>
+      <article>
+        <p>如果在社团中遭遇困难，你会不择手段解决问题吗？</p>
+        <label><input name="q25" type="radio" data-infl="xe" data-value="2">会，为了更好的发展，我必须突破障碍</label>
+        <label><input name="q25" type="radio" data-infl="xe" data-value="1">会，我在参与时就已经意识到可能的风险</label>
+        <label><input name="q25" type="radio" data-infl="xn" data-value="1">不会，除非只是小问题</label>
+        <label><input name="q25" type="radio" data-infl="xn" data-value="2">不会，大家都是为了共同目标而努力</label>
+      </article>
+      <article>
+        <p>走秀团的团长是否应该对迟到的人发火？</p>
+        <label><input name="q26" type="radio" data-infl="xn" data-value="2">是的，这就是团长的权威</label>
+        <label><input name="q26" type="radio" data-infl="xn" data-value="1">是的，有时要靠吓，他们才肯干活</label>
+        <label><input name="q26" type="radio" data-infl="xg" data-value="1">不是，团长要做大家的好朋友</label>
+        <label><input name="q26" type="radio" data-infl="xg" data-value="2">任何人都无权恶劣对待别人。以上。</label>
+      </article>
+      <article>
+        <p>你的工作失误意外导致了晚会事故，你会：</p>
+        <label><input name="q27" type="radio" data-infl="xg" data-value="2">承认错误，并愿意给出赔偿</label>
+        <label><input name="q27" type="radio" data-infl="xg" data-value="1">承认错误，请求大家的原谅</label>
+        <label><input name="q27" type="radio" data-infl="xe" data-value="1">隐瞒自己的过错，必要时说谎</label>
+        <label><input name="q27" type="radio" data-infl="xe" data-value="2">嫁祸于人</label>
+      </article>
+      <article>
+        <p>有人指控你的行为危害到社团，你会：</p>
+        <label><input name="q28" type="radio" data-infl="lx" data-value="2">认错，因为我有这个责任</label>
+        <label><input name="q28" type="radio" data-infl="lx" data-value="1">认错，这样我更容易获得原谅</label>
+        <label><input name="q28" type="radio" data-infl="nx" data-value="1">不认错，我会等到别人证明我有罪</label>
+        <label><input name="q28" type="radio" data-infl="nx" data-value="2">不认错，我会证明我“无罪”的</label>
+      </article>
+      <article>
+        <p>即使与执委意见相左，你也会指出元火的不足吗？</p>
+        <label><input name="q29" type="radio" data-infl="cx" data-value="2">会，我宁愿受罚也不愿保持沉默</label>
+        <label><input name="q29" type="radio" data-infl="cx" data-value="1">会，总要有人说真话</label>
+        <label><input name="q29" type="radio" data-infl="nx" data-value="1">不会，尽管私底下我会对朋友说</label>
+        <label><input name="q29" type="radio" data-infl="nx" data-value="2">不会，不值得为社团政治费神</label>
+      </article>
+      <article>
+        <p>你参与的社团项目中，有人与其他社员起了严重的冲突。你被要求在紧急执委会上调解此事，你会：</p>
+        <label><input name="q30" type="radio" data-infl="cx" data-value="2">谎称有事去不了</label>
+        <label><input name="q30" type="radio" data-infl="cx" data-value="1">说自己什么也不知道</label>
+        <label><input name="q30" type="radio" data-infl="lx" data-value="1">勉强参会，作证，然后离开</label>
+        <label><input name="q30" type="radio" data-infl="lx" data-value="2">在执委会上热心地调解矛盾</label>
+      </article>
+      <article>
+        <p>参与社团活动的最大价值是什么？</p>
+        <label><input name="q31" type="radio" data-infl="xg" data-value="2">帮助社团成员和社区</label>
+        <label><input name="q31" type="radio" data-infl="xg" data-value="1">满足朋友和同事的需求</label>
+        <label><input name="q31" type="radio" data-infl="xe" data-value="1">提升个人能力，展现自我</label>
+        <label><input name="q31" type="radio" data-infl="xe" data-value="2">不仅提升自己，还要超越他人</label>
+      </article>
+      <article>
+        <p>参加活动的新人声称自己无法完成工作，你会：</p>
+        <label><input name="q32" type="radio" data-infl="xg" data-value="2">慷慨地提供支持</label>
+        <label><input name="q32" type="radio" data-infl="xg" data-value="1">适度地给予帮助</label>
+        <label><input name="q32" type="radio" data-infl="xn" data-value="1">只提供我认为无关紧要的帮助</label>
+        <label><input name="q32" type="radio" data-infl="xn" data-value="2">选择忽视</label>
+      </article>
+      <article>
+        <p>通过社团活动，你可以让成员们以为你的想法是最好的。你会这样做吗？</p>
+        <label><input name="q33" type="radio" data-infl="xe" data-value="2">会，并且我会尽可能推广我的想法</label>
+        <label><input name="q33" type="radio" data-infl="xe" data-value="1">会，但只针对我认为有影响力的成员</label>
+        <label><input name="q33" type="radio" data-infl="xn" data-value="1">不会，风险太大了</label>
+        <label><input name="q33" type="radio" data-infl="xn" data-value="2">不会，大家的观点都很重要</label>
+      </article>
+      <article>
+        <p>你有两个社团职位可以选择。一个更有挑战性，另一个更稳定。你会选哪一个？</p>
+        <label><input name="q34" type="radio" data-infl="nx" data-value="2">肯定是更具挑战性的那份；稳定的职位听起来太无聊</label>
+        <label><input name="q34" type="radio" data-infl="nx" data-value="1">可能会选择前者，但我会了解后者的工作内容</label>
+        <label><input name="q34" type="radio" data-infl="lx" data-value="1">后者，除非前者的挑战性很吸引我</label>
+        <label><input name="q34" type="radio" data-infl="lx" data-value="2">肯定是稳定的那份，因为我有长远的规划</label>
+      </article>
+      <article>
+        <p>最佳的社团发展途径是什么？</p>
+        <label><input name="q35" type="radio" data-infl="cx" data-value="2">这关乎团队合作和机会</label>
+        <label><input name="q35" type="radio" data-infl="cx" data-value="1">灵活应变会带来更多机会</label>
+        <label><input name="q35" type="radio" data-infl="lx" data-value="1">制定一个有适度风险的长期计划</label>
+        <label><input name="q35" type="radio" data-infl="lx" data-value="2">努力工作，坚持不懈</label>
+      </article>
+      <article>
+        <p>如果你接手一个困难的社团项目，尽管它会很有挑战性，你会努力完成吗？</p>
+        <label><input name="q36" type="radio" data-infl="nx" data-value="2">会，我会履行承诺</label>
+        <label><input name="q36" type="radio" data-infl="nx" data-value="1">会，因为这会让大家信任我，这很好</label>
+        <label><input name="q36" type="radio" data-infl="cx" data-value="1">你可以赌我会否违约</label>
+        <label><input name="q36" type="radio" data-infl="cx" data-value="2">如果这个项目不值得，我就不参与了</label>
+      </article>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+      <button id="prev" class="outline">上一题</button>
+    </div>
+
+    <div id="alignments">
+      <article data-alignment="lg">
+        <h3>你的阵营是：守序善良</h3>
+        <p>
+          守序善良的社团成员相信，一个有序且强大的社团结构，配合高尚的领导和管理，能让更多人从中受益。只要成员们遵守规则，互相扶持，社团整体就会走向更好的未来。因此，这类成员会为社团的共同福祉不断努力，力求减少损害并增加大家的幸福感。他们始终坚守自己的承诺，正如遵守一份誓言那样坚定不移。守序善良的人通常会在社团中担任重要职务，以确保社团的正常运转。他们会尽力维护社团的规则，以确保社团的长久发展。
+        </p>
+        <p>
+          然而，守序善良的人也常陷入困境——有时为守护原则，便可能要做出艰难的抉择。比如，当履行职责会牺牲个体的利益，或在社团规则与外部约定产生冲突时，如何取舍成为他们必须面对的两难。
+        </p>
+      </article>
+      <article data-alignment="ng">
+        <h3>你的阵营是：中立善良</h3>
+        <p>
+          中立善良的社团成员相信，保持力量的平衡至关重要，过分强调规则或完全追求自由都无法带来真正的善。因为社团中的成员各自有不同的目标和愿望，所以为了实现共同的善，他们不会偏执于某种固定的社团结构，反而会尽力维护内部的平衡。如果社团的秩序有助于推动善的实现，他们会支持现有的管理方式；而如果打破现有秩序能带来更好的结果，他们也会毫不犹豫地推动变革。对他们而言，社团的结构并不是最重要的，善良才是首要目标。中立善良的社团成员的优势在于，他们在行善时不会被地位或身份所左右，能够公平地对待所有人。
+        </p>
+      </article>
+      <article data-alignment="cg">
+        <h3>你的阵营是：混乱善良</h3>
+        <p>
+          混乱善良的社团成员喜欢按照自己的方式行事，但本性善良。他们认同社团的美德和目标，但不喜欢受到严格规则或条例的束缚。要让他们完全按照命令行事几乎是不可能的，因为他们有自己的一套道德标准。这些标准未必符合大众的认知，虽然不会为恶，但他们的行为可能在常规社团成员眼中显得不合常理。混乱善良的成员常因为不喜欢被指使而引发内部冲突，比起按计划行事，他们更喜欢即兴发挥。他们虽然会用强硬的手段对付他们认为是对社团不利的人，但内心并没有恶意，只是单纯为了维护善。
+        </p>
+      </article>
+      <article data-alignment="ln">
+        <h3>你的阵营是：守序中立</h3>
+        <p>
+          守序中立的社团成员非常重视秩序和组织。他们支持一个强大、有序的社团结构，无论领导是民主选举的代表，还是专制的独裁者，他们都毫不在意。他们坚信社团需要规则，而规则必须得到严格遵守。在他们看来，秩序比道德或个人善恶更加重要。无论规则带来的后果如何，他们都会坚守规定。他们是社团中最公正的裁决者，遵守纪律是他们的核心信念。虽然他们对善恶持中立态度，但这并不代表他们没有道德立场，只是他们将遵守规矩放在首位，超越了善恶的判断。
+        </p>
+      </article>
+      <article data-alignment="nn">
+        <h3>你的阵营是：绝对中立</h3>
+        <p>
+          绝对中立的社团成员相信维持社团的平衡至关重要，因此他们避免卷入极端的善恶或秩序与混乱的冲突中。他们不愿偏向任何一方，甚至会刻意在社团中保持中立立场。当某一方的势力过于强大时，他们会倾向与弱势一方合作，以恢复平衡。而当力量对比反转时，他们也会毫不犹豫地转换立场。为了避免破坏社团的整体平衡，他们小心翼翼地行动，避免采取任何会显著打破平衡的极端手段。
+        </p>
+      </article>
+      <article data-alignment="cn">
+        <h3>你的阵营是：混乱中立</h3>
+        <p>
+          混乱中立的社团成员按照自己的兴趣和冲动行事，完全是个自由主义者。他们珍视自己的自由权，但并不关心是否保护他人的自由。他们蔑视权威，反感束缚，也不会轻易遵从传统。然而，混乱中立的成员并非有意破坏社团的结构或瓦解组织；如果他们这么做，那他们的立场便会转变为善良（希望解放他人）或邪恶（以伤害异己为目的）。混乱中立的行为可能难以预测，但并非完全随机，他们在面对某个选择时也有自己的判断标准，而不是单纯的任性妄为。对他们而言，自由比改善社团更重要。
+        </p>
+      </article>
+      <article data-alignment="le">
+        <h3>你的阵营是：守序邪恶</h3>
+        <p>
+          守序邪恶的社团成员非常有系统地追求自己的目标，他们的行动遵循严格的行为准则，但丝毫不关心这些行为会对他人造成怎样的伤害。他们尊重传统和秩序，乐于在社团中占据主导地位，或者为那些掌握权力的人服务。他们冷酷无情，毫无怜悯之心，严格按照规则行事，但这些规则并非为了保护他人自由和尊严，而是为了巩固自己的权力与地位。他们通常会遵守法律和承诺，不是出于道德，而是为了利用秩序的力量保护自己免受反对声音的威胁。某些守序邪恶的成员可能有自己的禁忌，例如不亲自残害无辜，但他们会让他人替自己完成这些事，以此满足自己的野心。
+        </p>
+      </article>
+      <article data-alignment="ne">
+        <h3>你的阵营是：中立邪恶</h3>
+        <p>
+          中立邪恶的社团成员只为自己利益行事，无论是为了财富、快乐，还是简单的便利，他们都毫不犹豫地牺牲他人利益。他们不会为任何死在他们手下的人感到惋惜。与混乱邪恶不同，中立邪恶者并不刻意追求冲突或混乱，他们行事更为冷静和理性。有些中立邪恶的成员甚至将邪恶视为一种信仰，积极为邪恶势力效力。这类成员通常隶属于秘密组织或崇拜邪恶力量的团体，他们的行动完全没有任何荣誉感或道德区分，只关注如何为自己谋取最大利益。
+        </p>
+      </article>
+      <article data-alignment="ce">
+        <h3>你的阵营是：混乱邪恶</h3>
+        <p>
+          混乱邪恶的社团成员会因为贪婪、仇恨或欲望而不择手段地行事。他们冲动、暴力，散播邪恶与混乱，只为了满足自己的私欲。相比有序的社团成员，他们的行动往往毫无计划，甚至会破坏社团的正常运作。他们极度自私，很难与他人合作，除非迫不得已。混乱邪恶的可怕之处在于，他们不仅破坏社团中的秩序，还会摧毁整个社团赖以存在的基础。他们对美好和生命没有任何敬畏之心，只追求自我满足，即使这一切会带来巨大的破坏。
+        </p>
+      </article>
+    </div>
+
+  </main>
+  <footer style="text-align: center;">
+    <small style="opacity: 0.6;">改编自官方DnD测试</small>
+  </footer>
+</body>
+
+</html>

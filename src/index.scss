@@ -1,0 +1,24 @@
+@use "node_modules/@picocss/pico/scss/pico" with (
+  $enable-semantic-container: true,
+  $enable-classes: true
+);
+
+#tests>article {
+  display: none;
+}
+
+#tests>article.active {
+  display: block;
+}
+
+#alignments>article {
+  display: none;
+}
+
+#alignments>article.active {
+  display: block;
+}
+
+button {
+  margin-bottom: 1rem;
+}
