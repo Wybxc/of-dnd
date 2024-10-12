@@ -9,6 +9,15 @@ const prev = document.getElementById('prev')! as HTMLButtonElement; // 上一题
 const total = tests.length;
 progress.setAttribute('max', (total - 1).toString());
 
+// 选项随机排列
+for (const test of tests) {
+    const options = Array.from(test.children).slice(1);
+    const shuffled = Array.from(options).sort(() => Math.random() - 0.5);
+    for (const option of shuffled) {
+        test.appendChild(option);
+    }
+}
+
 // 当前测试题目索引
 const current = signal(0);
 
